@@ -1,10 +1,10 @@
 import { ExternalLink, BookOpen, FileText, Info } from 'lucide-react';
 
 const links = [
-  { label: 'About', icon: Info },
-  { label: 'Documentation', icon: FileText },
-  { label: 'GitHub', icon: ExternalLink },
-  { label: 'Learn Automata', icon: BookOpen },
+  { label: 'About', icon: Info, href: '#' },
+  { label: 'Documentation', icon: FileText, href: '#' },
+  { label: 'GitHub', icon: ExternalLink, href: 'https://github.com/AnshulK-01/ArdenPlayground' },
+  { label: 'Learn Automata', icon: BookOpen, href: '#' },
 ];
 
 export default function Footer() {
@@ -17,9 +17,14 @@ export default function Footer() {
         </div>
         <div style={{ display: 'flex', gap: '24px' }}>
           {links.map((l, i) => (
-            <a key={i} href="#" style={{ display: 'flex', alignItems: 'center', gap: '6px', fontSize: '12px', color: '#64748b', textDecoration: 'none', transition: 'color 0.2s' }}
-              // onMouseEnter={e => e.target.style.color = '#3b82f6'}
-              // onMouseLeave={e => e.target.style.color = '#64748b'}
+            <a 
+              key={i} 
+              href={l.href} 
+              target={l.href.startsWith('http') ? "_blank" : undefined}
+              rel={l.href.startsWith('http') ? "noopener noreferrer" : undefined}
+              style={{ display: 'flex', alignItems: 'center', gap: '6px', fontSize: '12px', color: '#64748b', textDecoration: 'none', transition: 'color 0.2s' }}
+              onMouseEnter={e => e.currentTarget.style.color = '#3b82f6'}
+              onMouseLeave={e => e.currentTarget.style.color = '#64748b'}
             >
               <l.icon size={13} /> {l.label}
             </a>
