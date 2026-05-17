@@ -215,9 +215,9 @@ Powered by **Google Gemini 2.5 Flash** for fast, accurate responses.
 | Name | Role |
 |------|------|
 | **Anshul** | Lead Developer |
-| **Dhananjya** | Developer |
-| **Abhinaw** | Developer |
-| **Ritik** | Developer |
+| **Dhananjya** | Tester |
+| **Abhinaw** | Tester |
+| **Ritik** | Tester |
 
 **Institution:** JSS University, Noida (JSSUN'28)  
 **Department:** CSE - Artificial Intelligence & Machine Learning  
